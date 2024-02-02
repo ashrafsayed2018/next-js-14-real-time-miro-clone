@@ -1,6 +1,6 @@
+"use client"
 import { Plus } from "lucide-react"
 import { CreateOrganization } from "@clerk/nextjs"
-
 import {
  Dialog,
  DialogContent,
@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog"
 import {Hint} from "@/components/hint"
 
-function NewButton() {
+export const  NewButton =() => {
   return (
     <Dialog>
         <DialogTrigger asChild>
@@ -24,7 +24,7 @@ function NewButton() {
 
             </div>
         </DialogTrigger>
-        <DialogContent className="p-0  border-none max-w-[480px]">
+        <DialogContent className="p-0 border-none max-w-[480px]">
             <CreateOrganization />
         </DialogContent>
     </Dialog>

@@ -30,13 +30,13 @@ export interface HintProps {
                   {children}
                </TooltipTrigger>
                <TooltipContent 
-               className="text-white
-                bg-black 
+                  className="text-white
+                  bg-black 
                   border-black"
-               side={side} 
-               align={align}
-               sideOffset={sideOffset}
-               alignOffset={alignOffset}>
+                  side={side} 
+                  align={align}
+                  sideOffset={sideOffset}
+                  alignOffset={alignOffset}>
                    <p className="font-semibold capitalize">
                       {label}
                    </p>

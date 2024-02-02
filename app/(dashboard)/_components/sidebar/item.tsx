@@ -14,7 +14,7 @@ interface itemsProps {
     name : string
     imageUrl : string
 }
-function Item({id, name, imageUrl} :itemsProps) {
+export const  Item =({id, name, imageUrl} :itemsProps) =>{
 
  const {organization} = useOrganization();
  const {setActive }   = useOrganizationList();
@@ -23,10 +23,8 @@ function Item({id, name, imageUrl} :itemsProps) {
 
  const onClick = () => {
     if (!isActive || !setActive) return;
-
-        setActive({organization: id});
-    
- }
+         setActive({organization: id});
+      }
   return (
     <div className="aspect-square relative">
          <Hint
@@ -49,4 +47,3 @@ function Item({id, name, imageUrl} :itemsProps) {
   )
 }
 
-export default Item

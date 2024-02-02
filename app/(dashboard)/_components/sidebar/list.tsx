@@ -1,8 +1,8 @@
 "use client"
 import { useOrganizationList } from "@clerk/nextjs"
-import Item from "./item";
+import {Item} from "./item";
 
-function List() {
+export const  List = () => {
 
     const {userMemberships} = useOrganizationList({
         userMemberships: {
@@ -10,7 +10,6 @@ function List() {
         }
     });
 
-    console.log(userMemberships);
 
     if (userMemberships!.data!.length < 0 ) return null;
   return (
@@ -19,11 +18,11 @@ function List() {
         userMemberships.data!.map((member) => {
              return <>
               <Item 
-              key={member.id}
-              id={member.id}
-              name={member.organization.name}
-              imageUrl={member.organization.imageUrl}
-              />
+                key={member.id}
+                id={member.id}
+                name={member.organization.name}
+                imageUrl={member.organization.imageUrl}
+               />
              </>
         })
         }
@@ -31,4 +30,3 @@ function List() {
   )
 }
 
-export default List
